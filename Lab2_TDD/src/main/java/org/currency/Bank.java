@@ -1,4 +1,4 @@
-package org;
+package org.currency;
 
 import org.currency.Expression;
 import org.currency.Money;

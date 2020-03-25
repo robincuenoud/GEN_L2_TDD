@@ -1,6 +1,5 @@
 package org.currency;
 
-import org.Bank;
 import org.junit.Test;
 
 
