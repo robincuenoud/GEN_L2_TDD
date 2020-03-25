@@ -1,6 +1,6 @@
-package org.currency;
+package java.org.currency;
 
-public class Money {
+public class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -22,19 +22,25 @@ public class Money {
         return new Money(amount * multiplier, currency);
     }
 
+    Expression plus(Money addend){
+        return new Money(amount + addend.amount, currency);
+    }
+
     String currency(){
         return currency;
     }
 
-    static Money franc(int amount) {
+    public static Money franc(int amount) {
 
         return new Money(amount, "CHF");
     }
 
-    static Money dollar(int amount)  {
+    public static Money dollar(int amount)  {
 
         return new Money(amount, "USD");
 
     }
+
+
 
 }
